@@ -13,6 +13,10 @@ const helpers = require('./lib/helpers');
 const config = require('./lib/config');
 const handlers = require('./lib/handlers');
 
+helpers.sendTwilioSms('8403074423', 'hello', (err) => {
+	console.log('This was the error ', err);
+});
+
 // All the server logic for both HTTP and HTTPS
 const unifiedServer = (req, res) => {
 	// Get the URL and parse it
